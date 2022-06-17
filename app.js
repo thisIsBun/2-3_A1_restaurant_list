@@ -7,6 +7,9 @@ const port = 3000
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 
+// setup static files for express
+app.use(express.static('public'))
+
 // setup route
 app.get(('/'), (req, res) => {
   res.render('index')
