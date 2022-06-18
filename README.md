@@ -14,6 +14,13 @@
 - 使用者可用 餐廳名稱(中/英皆可)、餐廳類別來找到特定的餐廳
 
 
+<h2>建置環境</h2>
+
+- Node.js v16.15.1
+- Express v4.16.4
+- Express-handlebars v3.0.0
+- Bootstrap v4.3.1
+
 <h2>安裝指南</h2>
 
 - Node.js v16.15.1
