@@ -1,6 +1,7 @@
 const express = require('express') //access express framework for route
-const app = express() //activate express
 const exphbs = require('express-handlebars') //access handlebars for template engine
+const restaurantList = require('./restaurant.json')
+const app = express() //activate express
 const port = 3000
 
 // setup handlebars engine
@@ -12,7 +13,7 @@ app.use(express.static('public'))
 
 // setup route
 app.get(('/'), (req, res) => {
-  res.render('index')
+  res.render('index', { restaurant: restaurantList.results })
 })
 
 // setup server and activate listener
