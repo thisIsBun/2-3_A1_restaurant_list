@@ -20,8 +20,20 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
+
+      {{!-- if no restaurant list, render below message --}}
+      {{#if restaurant }}
+      <div class="alert alert-info mt-3 mx-auto" role="alert">
+        有 {{restaurant.length}}家 餐廳符合，以下是搜尋結果：
+      </div>
+      {{else}}
+      <div class="alert alert-danger mt-3 mx-auto" role="alert">
+        真不巧... 我們還沒有這家餐廳。
+      </div>
+      {{/if}}
+
       <div class="card-columns">
-        
+
         {{#each restaurant}}
         <a href="/restaurants/{{this.id}}" class="text-secondary">
           <div class="card mb-3">
