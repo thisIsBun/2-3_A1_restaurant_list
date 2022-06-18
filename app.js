@@ -11,9 +11,18 @@ app.set('view engine', 'handlebars')
 // setup static files for express
 app.use(express.static('public'))
 
-// setup route
+// setup route for index page
 app.get(('/'), (req, res) => {
   res.render('index', { restaurant: restaurantList.results })
+})
+
+// setup route for show page
+app.get(('/restaurants/:restaurant_id'), (req, res) => {
+
+  const restaurant = restaurantList.results.find(item => item.id.toString() === req.params.restaurant_id)
+  console.log(restaurant)
+
+  res.render('show', { restaurant: restaurant })
 })
 
 // setup server and activate listener
