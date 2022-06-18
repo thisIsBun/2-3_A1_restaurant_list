@@ -1,6 +1,11 @@
 # 餐廳清單 1.0
 這是一個提供使用者查詢餐廳的網站，使用者可檢視詳細的餐廳資訊。
 
+<img width="1338" alt="image" src="https://user-images.githubusercontent.com/106903594/174432937-9d3c8c72-7291-4a28-b833-b4576b75bcee.png">
+
+
+
+
 <h2>功能介紹</h2>
 
 使用者可在首頁看到所有的餐廳清單，包含下面的簡介：
