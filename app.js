@@ -1,11 +1,11 @@
 const express = require('express') //access express framework for route
 const exphbs = require('express-handlebars') //access handlebars for template engine
-const restaurantList = require('./restaurant.json')
+const restaurantList = require('./restaurant.json') //access restaurant.json file
 const app = express() //activate express
 const port = 3000
 
 // setup handlebars engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}))
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 // setup static files for express
@@ -24,11 +24,10 @@ app.get(('/restaurants/:restaurant_id'), (req, res) => {
 
 // setup route for search
 app.get(('/search'), (req, res) => {
-  const keyword = req.query.keyword
-  const restaurants = restaurantList.results.filter(item => {
-    return item.name.toLowerCase().includes(keyword.toLowerCase()) | item.category.toLowerCase().includes(keyword.toLowerCase())
-  })
-  res.render('index', { restaurant: restaurants, keyword: keyword })
+  const keyword = req.query.keyword.trim().toLowerCase()
+  const restaurants = restaurantList.results.filter(item => item.name.toLowerCase().includes(keyword) || item.category.toLowerCase().includes(keyword) || item.name_en.toLowerCase().includes(keyword))
+
+  res.render('index', { restaurant: restaurants, keyword: req.query.keyword })
 })
 
 // setup server and activate listener
