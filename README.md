@@ -24,7 +24,7 @@
 
 <h2>安裝指南</h2>
 
-1. 請先確認環境已經有安裝 Node.js，並建議使用 v16.15.1版本
+1. 請先確認本機環境已經有安裝 Node.js，建議使用 nvm安裝 Node.js，並切換到 v16.15.1
 2. 在本機開啟終端機，輸入以下指令將此專案複製到本機：
    ```
    git clone https://github.com/thisIsBun/2-3_A1_restaurant_list.git
