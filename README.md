@@ -25,26 +25,22 @@
 <h2>安裝指南</h2>
 
 1. 請先確認環境已經有安裝 Node.js，並建議使用 v16.15.1版本
-2. 開啟終端機，輸入以下指令將此專案複製到本機：
+2. 在本機開啟終端機，輸入以下指令將此專案複製到本機：
    ```
    git clone https://github.com/thisIsBun/2-3_A1_restaurant_list.git
    ```
-3. 因為此專案需要的 npm工具，並沒有存在 github repository裡。
-   所以須再用以下步驟，把需要的工具安裝到專案資料夾裡。
-
-   3.1 用終端機用 cd指令，移動到專案資料夾後，先輸入以下指令安裝 npm需要的 package.json：
-       ```
-       npm init -y
-       ```
+3. 終端機移動到專案資料夾後，再輸入以下指令，並確認指令有完成執行：
    
-   3.2 再輸入以下指令安裝 Express
-       ```
-       npm install Express@4.16.4
-       ```
+   ```
+   npm install
+   ```
       
-   3.3 最後再安裝 Express-Handlebars
-       ```
-       npm install express-handlebars@3.0.0
-       ``` 
+4. 再繼續輸入以下指令：
+   ```
+   npm run start
+   ``` 
        
-   3.4 若本機沒有安裝 nodemon
+5. 若在終端機看到以下訊息，表示專案可在本機運行了，即可開啟瀏覽器檢視專案 (http://localhost:3000) 
+   ```
+   Express is now listening to http://localhost:3000
+   ```
