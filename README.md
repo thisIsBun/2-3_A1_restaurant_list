@@ -29,7 +29,7 @@
    ```
    git clone https://github.com/thisIsBun/2-3_A1_restaurant_list.git
    ```
-3. 終端機移動到專案資料夾後，再輸入以下指令，並確認指令有完成執行：
+3. 終端機移動到專案資料夾(檔案名稱：2-3_A1_restaurant_list)後，再輸入以下指令，並確認指令有完成執行：
    
    ```
    npm install
