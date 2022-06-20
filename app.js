@@ -24,10 +24,10 @@ app.get(('/restaurants/:restaurant_id'), (req, res) => {
 
 // setup route for search
 app.get(('/search'), (req, res) => {
-  const keyword = req.query.keyword.trim().toLowerCase()
-  const restaurants = restaurantList.results.filter(item => item.name.toLowerCase().includes(keyword) || item.category.toLowerCase().includes(keyword) || item.name_en.toLowerCase().includes(keyword))
+  const keyword = req.query.keyword.trim()
+  const restaurants = restaurantList.results.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase()) || item.category.toLowerCase().includes(keyword.toLowerCase()) || item.name_en.toLowerCase().includes(keyword.toLowerCase()))
 
-  res.render('showfilter', { restaurant: restaurants, keyword: req.query.keyword})
+  res.render('index', { restaurant: restaurants, keyword: keyword})
 })
 
 // setup server and activate listener
